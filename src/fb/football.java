@@ -12,7 +12,7 @@ public class football {
 	@Produces(MediaType.TEXT_PLAIN)   
 	public String nottingcoming() 
 	{      
-		return "Hello I Think You Forgot SomeThing";    
+		return "Hello I Think You Forgot SomeThing/";    
 	} 
 
 }
