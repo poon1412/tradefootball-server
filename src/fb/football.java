@@ -9,9 +9,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 public class football {
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("TEST");
-	}
+	@Produces(MediaType.TEXT_PLAIN)   
+	public String nottingcoming() 
+	{      
+		return "Hello I Think You Forgot SomeThing";    
+	} 
 
 }
