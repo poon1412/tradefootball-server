@@ -18,7 +18,7 @@ import com.mongodb.DBObject;
 @Path("player")
 public class football {
 	@GET
-	@Path("/findplayer") 
+	@Path("/findplayer/{name}") 
 	@Produces(MediaType.TEXT_XML)  
 	public String findplayer(@PathParam("name") String name) {
 		DB db = new Connect().mongo();
