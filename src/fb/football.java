@@ -34,10 +34,16 @@ public class football {
 		xml += "<return>";
 		for (DBObject object : myList) {
 			xml += "<player>";
-				xml += "<number>"+object.get("_id").toString()+"</number>";
-				xml += "<name>"+object.get("course_id").toString()+"</name>";
+				xml += "<number>"+object.get("number").toString()+"</number>";
 				xml += "<name>"+object.get("name").toString()+"</name>";
-				xml += "<description>"+object.get("description").toString()+"</description>";
+				xml += "<lname>"+object.get("lname").toString()+"</lname>";
+				xml += "<age>"+object.get("age").toString()+"</age>";
+				xml += "<weight>"+object.get("weight").toString()+"</weight>";
+				xml += "<height>"+object.get("height").toString()+"</height>";
+				xml += "<D_M_Y>"+object.get("D_M_Y").toString()+"</D_M_Y>";
+				xml += "<address>"+object.get("address").toString()+"</address>";
+				xml += "<team>"+object.get("team").toString()+"</team>";
+				xml += "<position>"+object.get("position").toString()+"</position>";
 			xml += "</player>";
 		}
 		xml += "</return>";
