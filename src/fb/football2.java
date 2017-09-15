@@ -15,17 +15,17 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
-@Path("player")
-public class football {
+@Path("player2")
+public class football2 {
 	@GET
-	@Path("/findplayer/{name}") 
+	@Path("/findplayer2/{position}") 
 	@Produces(MediaType.TEXT_XML)  
-	public String findplayer(@PathParam("name") String name) {
+	public String findplayer(@PathParam("position") String name) {
 		DB db = new Connect().mongo();
 		DBCollection table = db.getCollection("player");
 		
 		BasicDBObject searchQuery = new BasicDBObject();
-		searchQuery.put("name", name);
+		searchQuery.put("position", name);
 		
 		DBCursor cursor = table.find(searchQuery);
 		List<DBObject> myList = cursor.toArray();
