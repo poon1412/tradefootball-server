@@ -34,7 +34,6 @@ public class football2 {
 		xml += "<return>";
 		for (DBObject object : myList) {
 			xml += "<player>";
-				xml += "<number>"+object.get("number").toString()+"</number>";
 				xml += "<name>"+object.get("name").toString()+"</name>";
 				xml += "<lname>"+object.get("lname").toString()+"</lname>";
 				xml += "<age>"+object.get("age").toString()+"</age>";
@@ -43,6 +42,9 @@ public class football2 {
 				xml += "<D_M_Y>"+object.get("D_M_Y").toString()+"</D_M_Y>";
 				xml += "<team>"+object.get("team").toString()+"</team>";
 				xml += "<position>"+object.get("position").toString()+"</position>";
+				xml += "<number>"+object.get("number").toString()+"</number>";
+				xml += "<country>"+object.get("country").toString()+"</country>";
+				xml += "<_idteam>"+object.get("_idteam").toString()+"</_idteam>";
 			xml += "</player>";
 		}
 		xml += "</return>";
