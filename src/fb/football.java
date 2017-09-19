@@ -23,7 +23,7 @@ public class football {
 	public String findplayer(@PathParam("name") String name) {
 		DB db = new Connect().mongo();
 		DBCollection table = db.getCollection("player");
-		
+		 
 		BasicDBObject searchQuery = new BasicDBObject();
 		searchQuery.put("name", name);
 		
