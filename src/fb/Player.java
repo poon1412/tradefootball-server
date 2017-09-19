@@ -27,7 +27,7 @@ public class Player {
 	@Produces(MediaType.TEXT_PLAIN)  
 	public String create(@FormParam("number") String number, @FormParam("name") String name, @FormParam("lname") String lname
 			, @FormParam("age") String age, @FormParam("weight") String weight, @FormParam("height") String height
-			, @FormParam("D_M_Y") String D_M_Y, @FormParam("team") String team, @FormParam("position") String position) {   
+			, @FormParam("D_M_Y") String D_M_Y, @FormParam("team") String team, @FormParam("position") String position, @FormParam("country") String country, @FormParam("_idteam") String _idteam) {   
 		
 		DB db = new Connect().mongo();
 		DBCollection collection = db.getCollection("player");
@@ -37,7 +37,7 @@ public class Player {
 		System.out.println(lname);
 		
 		BasicDBObject document = new BasicDBObject();
-		document.put("number", number);
+		
 		document.put("name", name);
 		document.put("age", age);
 		document.put("weight", weight);
@@ -45,6 +45,9 @@ public class Player {
 		document.put("D_M_Y", D_M_Y);
 		document.put("team", team);
 		document.put("position", position);
+		document.put("number", number);
+		document.put("country", country);
+		document.put("_idteam", _idteam);
 
 		collection.insert(document);
 		
