@@ -112,7 +112,7 @@ public class Player {
 				xml += "<id>"+object.get("_id").toString()+"</id>";
 				xml += "<number>"+object.get("number").toString()+"</number>";
 				xml += "<name>"+object.get("name").toString()+"</name>";
-				xml += "<Jones>"+object.get("Jones").toString()+"</Jones>";
+				xml += "<lname>"+object.get("lname").toString()+"</lname>";
 				xml += "<age>"+object.get("age").toString()+"</age>";
 				xml += "<weight>"+object.get("weight").toString()+"</weight>";
 				xml += "<height>"+object.get("height").toString()+"</height>";
